@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crypto Security Question</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .question {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .option {
+            background: white;
+            border: 2px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        .correct {
+            border-color: #10b981;
+            background-color: #e6f9f3;
+        }
+        .wrong {
+            border-color: #e74c3c;
+            background-color: #ffe6e6;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #10b981;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function showResult() {
+            document.getElementById("a").classList.add("wrong");
+            document.getElementById("a").innerHTML += " ❌";
+            document.getElementById("b").classList.add("wrong");
+            document.getElementById("b").innerHTML += " ❌";
+            document.getElementById("c").classList.add("wrong");
+            document.getElementById("c").innerHTML += " ❌";
+            document.getElementById("d").classList.add("correct");
+            document.getElementById("d").innerHTML += " ✅";
+        }
+    </script>
+</head>
+<body>
+    <div class="question">How are cryptocurrencies like Bitcoin transferred?</div>
+    <div class="option" id="a">Through bank cards</div>
+    <div class="option" id="b">Through central servers</div>
+    <div class="option" id="c">Through SMS</div>
+    <div class="option" id="d">Through blockchain technology</div>
+    <button onclick="showResult()">Submit Answer</button>
+</body>
+</html>
